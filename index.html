@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TgBot lib by E.</title>
+    <script src="tgbot.js"></script>
+    <style>
+        body {
+            background-color: #1b1b1b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 0 100px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(8.5px);
+            -webkit-backdrop-filter: blur(8.5px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            height: fit-content;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        input[type="text"] {
+            background-color: transparent;
+            border: none;
+            font-size: 16px;
+            flex-grow: 1;
+            padding: 10px;
+            color: white;
+            margin-right: 10px;
+        }
+        button {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            font-size: 16px;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        const bot = new TelegramBot('2042842545:AAEjPIps2YCRfTQQrZ4bLHGvt629qFcupkc');
+        let user = '1161722176'
+        function gonder(){
+            var mesaj = document.getElementById("mesaj").value;
+            bot.sendMessage(user, mesaj, null, function(err, response) {
+              if (err) {
+                console.error('Mesaj göndəriləndə xata baş verdi:', err);
+              } else {
+                console.log('Mesaj göndərildi:', response);
+              }
+            });
+        }
+        function fotogonder(){
+          var link = prompt("Foto linkini daxil edin")
+          bot.sendPhoto(user,link,null, function(err,response){
+            if (err){
+              console.error('Mesaj göndəriləndə xata baş verdi:',err);
+            } else {
+              console.log('Mesaj göndərildi:', response);
+            }
+          });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <input placeholder="Mesajı daxil edin..." type="text" id="mesaj">
+        <div>
+            <button onclick="fotogonder()">📷</button>
+            <button onclick="gonder()">Göndər</button>
+        </div>
+    </div>
+</body>
+</html>
