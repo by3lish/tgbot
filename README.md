@@ -9,7 +9,8 @@ Nümunə :
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TgBot lib by E.</title>
-    <script src="tgbot.js"></script><script>
+    <script src="tgbot.js"></script>
+    <script>
         // Telegram bot tokenini bot dəyişkəninə tanıdın
         const bot = new TelegramBot('2042842545:AAEjPIps2YCRfTQQrZ4bLHGvt629qFcupkc');
         // Mesajları qəbul edəcək şəxsin telegram user id nömrəsini user dəyişəninə tanıdın
