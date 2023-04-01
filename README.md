@@ -12,7 +12,7 @@ Nümunə :
     <script src="tgbot.js"></script>
     <script>
         // Telegram bot tokenini bot dəyişkəninə tanıdın
-        const bot = new TelegramBot('2042842545:AAEjPIps2YCRfTQQrZ4bLHGvt629qFcupkc');
+        const bot = new TelegramBot('TELEGRAM BOT TOKEN');
         // Mesajları qəbul edəcək şəxsin telegram user id nömrəsini user dəyişəninə tanıdın
         let user = '1161722176'
         // Göndər butonuna tıklandığı an işə düşəcək funksiya
